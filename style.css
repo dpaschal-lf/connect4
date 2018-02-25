@@ -1,0 +1,61 @@
+html{
+	font-size: 4vmin;
+}
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+}
+#gameNav{
+	height: 10vh;
+	background-color: lightyellow;
+}
+.mainGame{
+	height: 90vh;
+	background-color: lavender;
+	font-size: 0;
+}
+.mainGame > *{
+	display: inline-block;
+	font-size: 1rem;
+	border: 1px solid black;
+	height: 100%;
+}
+#gameArea{
+	width: 80%;
+}
+#playerInfo{
+	width: 20%;
+}
+.playerCell{
+	height: 13.356vmin;
+	width: 13.356vmin;
+	border: 1px solid black;
+	float: left;
+	position: relative;
+}
+.playerCell:hover{
+	background-color: blue;
+	color: white;
+}
+.chip{
+	height: 80%;
+	width: 80%;
+	position: absolute;
+	border: 1px solid black;
+	border-radius: 50%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: none;
+}
+
+.currentlyChecking{
+	background-color: red;
+}
+.checkingFrom{
+	background-color: pink;
+}
+
+
