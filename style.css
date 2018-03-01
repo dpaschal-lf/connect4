@@ -1,1 +1,84 @@
-style.css
+body{
+	margin: 0;
+	height: 100vh;
+	width: 100vw;
+}
+* {
+	box-sizing: border-box;
+}
+.mainGame{
+	height: 90%;
+}
+#gameArea{
+	height: 100%;
+}
+#gameNav{
+	height: 10%;
+	background-color: lavender;
+	position: relative;
+}
+/*player css*/
+#playerInfo{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 50%;
+	height: 100%;
+	border: 1px solid black;
+}
+.playerDisplay{
+	height: 100%;
+	width: 50%;
+	float: left;
+}
+.playerName, .playerImage{
+	float: left;
+}
+.playerName{
+	width: 50%;
+}
+.playerDisplay{
+	height: 100%;
+}
+.playerImage{
+	border: 1px solid grey;
+	border-top: none;
+	border-bottom: none;
+	height: 100%;
+	width: 50%;
+	text-align: center;
+}
+#playerInfo .playerImage > img{
+	height: 100%;
+}
+#playerInfo .active{
+	background-color: yellow;
+}
+
+/* game cell css */
+.cell{
+	border: 1px solid black;
+	float: left;
+	position: relative;
+	background-color: blue;
+}
+.chip{
+	border: 1px solid black;
+	border-radius: 50%;
+	height: 90%;
+	width: 90%;
+	position: absolute;
+	left: 5%;
+	top: 5%;
+    background-size: cover;
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+

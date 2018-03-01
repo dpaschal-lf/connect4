@@ -9,7 +9,9 @@ class ChipCell{
 			height: null,
 			width: null,
 			chipClass: 'chip',
-			cellClass: 'cell'
+			cellClass: 'cell',
+			getImageCallback: function(){},
+			clickCallback: function(){}
 		}
 		for(let key in defaults){
 			this[key] = options[key] !== undefined ? options[key] : defaults[key];
@@ -23,7 +25,7 @@ class ChipCell{
 				width: this.width
 			},
 			on:{
-				click: this.handleClick
+				click: this.handleClick.bind( this )
 			}
 		});
 		const chip = $("<div>",{
@@ -37,7 +39,12 @@ class ChipCell{
 		return cell;
 	}
 	handleClick(){
-		console.log('I got clicked', this);
+		console.log('CELL: I got clicked', event.currentTarget);
+		this.clickCallback( this );
+	}
+	mark(image){
+		$(this.domElements.chip).css('background-image', 'url('+image+')');
+		//this.domElements.chip.style.backgroundImage = 'url(images/bluechip.png)'
 	}
 }
 
